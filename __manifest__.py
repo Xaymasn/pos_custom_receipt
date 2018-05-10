@@ -11,6 +11,7 @@
     'data': [],
     'demo': [],
     'qweb': ['static/src/xml/pos_ticket.xml'],
+    'application':True,
     'installable': True,
     'auto_install': False,
 }
