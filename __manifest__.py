@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': 'custom_pos_receipt',
+    'name': 'Personnalisation du ticket de caisse',
     'summary': 'Personnalisation du ticket de caisse',
     'version': '10.0.1.1',
     'description': 'Personnalisation du ticket de caisse',
