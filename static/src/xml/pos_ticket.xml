@@ -25,7 +25,7 @@
                         <!--t t-if="order.get_client()">
                             Client: <t t-esc="order.get_client().name"/><br />
                         </t-->
-                        <div style="width:100%;text-align:center;font-style: italic;"><t t-esc="widget.pos.cashier ? widget.pos.cashier.name : widget.pos.user.name"/> vous a servi :<br /></div>
+                        <div style="width:100%;text-align:center;font-style: italic;"><br/><br/> <t t-esc="widget.pos.cashier ? widget.pos.cashier.name : widget.pos.user.name"/> vous a servi :<br /></div>
                     </div>
                 </div>
                 <br />
@@ -46,7 +46,7 @@
                         <th>Qté</th>
                         <th>Designation</th>
                         <th>P.U</th>
-                        <th>Sous-Total</th>
+                        <th>Prix Total</th>
                     </tr>
                     <tr t-foreach="orderlines" t-as="orderline">
                         <td>
@@ -70,6 +70,7 @@
                             <t t-esc="widget.format_currency(orderline.get_display_price())"/>
                         </td>
                     </tr>
+                    <tr style="border-bottom: 1px solid #333;"></tr>
                 </table>
                 <br />
                 <table class='receipt-total'>
@@ -101,7 +102,7 @@
                             <t t-esc="widget.format_currency(order.get_total_discount())"/>
                         </td>
                     </tr>
-                    <tr class="emph">
+                    <tr class="emph" style="border-top: 1px dashed #000;border-bottom: 1px dashed #000;">
                         <td>Total:</td>
                         <td colspan="2" style='text-align:right'>
                             <t t-esc="widget.format_currency(order.get_total_with_tax())"/>
@@ -155,7 +156,7 @@
                 </div>
 
                 <t t-if="receipt.footer">
-                    <br />
+                    <br /> <br/>
                     <div style='text-align:center'>
                         <t t-esc="receipt.footer" />
                     </div>
