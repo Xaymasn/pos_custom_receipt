@@ -7,7 +7,7 @@
     'author': "Elhadji Malang Diedhiou",
     'website': "http://www.supermalang.com",
     'category': 'Point Of Sale',
-    'depends': ['base','point_of_sale'],
+    'depends': ['point_of_sale'],
     'data': [],
     'demo': [],
     'qweb': ['static/src/xml/pos_ticket.xml'],
