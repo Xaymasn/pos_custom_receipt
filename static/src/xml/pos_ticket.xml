@@ -8,8 +8,7 @@
     </t-->
 
     <t t-extend="PosTicket">
-        <t t-jquery='.pos-sale-ticket' t-operation='after'>
-        Bonjour
+        <t t-jquery='.pos-sale-ticket' t-operation='replace'>
             <div class="pos-sale-ticket">
                 <div>
                     <div style="padding: 20px 0px;">
