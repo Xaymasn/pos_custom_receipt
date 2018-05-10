@@ -58,10 +58,10 @@
                             </t>
                         </td>
                         <td>
-                            <t t-set="a" t-value="orderline.quantityStr"></t>
+                            <t t-set="a" t-value="orderline.get_quantity_str_with_unit"></t>
                             <t t-set="b" t-value="orderline.get_display_price()"></t>
                             <t t-set="c" t-value="b/a"></t>
-                            <t t-esc="price_unit"/>
+                            <t t-esc="c"/>
                         </td>
                         <td style='text-align:right'>
                             <t t-esc="widget.format_currency(orderline.get_display_price())"/>
@@ -147,13 +147,13 @@
                         </td></tr>
                 </table>
 
-                <div style="text-align:center">
+                <div style="text-align:center;padding:10px 0;">
                     <t t-esc="order.name"/> <br/>
                     <t t-esc="moment().format('L LT')"/>
                 </div>
 
                 <t t-if="receipt.footer">
-                    <div style='text-align:center;padding:10px 0;'>
+                    <div style='text-align:center;padding-bottom:5px;'>
                         <t t-esc="receipt.footer" />
                     </div>
                 </t>
