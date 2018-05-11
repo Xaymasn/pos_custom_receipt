@@ -57,12 +57,12 @@
                             <t t-esc="orderline.get_product().display_name"/>
                              <t t-if="orderline.get_discount() > 0">
                                 <div class="pos-disc-font">
-                                    With a discount of <t t-esc="orderline.get_discount()"/>%
+                                    Remise de <t t-esc="orderline.get_discount()"/>%
                                 </div>
                             </t>
                         </td>
                         <td>
-                            <t t-set="a" t-value="orderline.get_quantity_str_with_unit"></t>
+                            <t t-set="a" t-value="orderline.get_quantity_str_with_unit()"></t>
                             <t t-set="b" t-value="orderline.get_display_price()"></t>
                             <t t-set="c" t-value="b/a"></t>
                             <t t-esc="c"/>
