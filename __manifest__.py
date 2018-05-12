@@ -2,10 +2,10 @@
 {
     'name': 'Ticket de caisse - PdV',
     'summary': 'Personnalisation du ticket de caisse',
-    'version': '10.0.1.1',
+    'version': '11.0.1.0',
     'description': 'Personnalisation du ticket de caisse',
-    'author': 'Elhadji Malang Diedhiou',
-    'website': 'http://www.supermalang.com',
+    'author': 'Xayma Solutions',
+    'website': 'http://www.xayma-solutions.com',
     'category': 'Point Of Sale',
     'depends': ['point_of_sale'],
     'data': [],
