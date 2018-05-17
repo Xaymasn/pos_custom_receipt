@@ -2,7 +2,7 @@
 {
     'name': 'Ticket de caisse - PdV',
     'summary': 'Personnalisation du ticket de caisse',
-    'version': '11.0.1.0',
+    'version': '11.0.1.1',
     'description': 'Personnalisation du ticket de caisse',
     'author': 'Xayma Solutions',
     'website': 'http://www.xayma-solutions.com',

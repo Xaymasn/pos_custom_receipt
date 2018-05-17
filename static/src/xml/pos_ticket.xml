@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <template xml:space="preserve">
-    <!--t t-extend="Chrome">
+    <t t-extend="Chrome">
         <t t-jquery='.pos-branding' t-operation='replace'>
-             <img src='/web/binary/company_logo' style="width: 3%;padding: 2px 8px 0px 13px;float: left;"/>
+             <img src='/img/Logo_Texte.png' style="width: 3%;padding: 2px 8px 0px 13px;float: left;"/>
              <span class="placeholder-UsernameWidget" style="float: left;padding-top: 19px;color: #fff;"></span>
         </t>
-    </t-->
+    </t>
 
     <t t-extend="PosTicket">
         <t t-jquery='.pos-sale-ticket' t-operation='replace'>
@@ -14,22 +14,21 @@
                     <t t-if="widget.pos.company.name">
                         <div style="width:100%;text-align:center;text-transform:uppercase;font-size:1.5em;"><t t-esc="widget.pos.company.name"/></div>
                     </t>
-                    <t t-if='widget.pos.company.contact_address'>
+                    <!-- Voir dans les futures versions comment récupérer l'adresse -->
+                    <!--t t-if='widget.pos.company.contact_address'>
                         <div><t t-esc='widget.pos.company.contact_address' /></div>
-                    </t>
+                    </t-->
                     <t t-if="widget.pos.company.email">
                         <div style="width:100%;text-align:center;"><t t-esc="widget.pos.company.email"/></div>
                     </t>
-                        <t t-if="widget.pos.company.phone">
+                    <t t-if="widget.pos.company.phone">
                         <div style="width:100%;text-align:center;"><t t-esc="widget.pos.company.phone || ''"/></div>
                     </t>
 
-                    <!--t t-if="order.get_client()">
-                        Client: <t t-esc="order.get_client().name"/><br />
-                    </t-->
-
                     <!-- Le nom du serveur -->    
                     <div style="width:100%;padding:10px 0;text-transform:uppercase;text-align:center;font-style: italic;text-transform:uppercase;"><t t-esc="widget.pos.cashier ? widget.pos.cashier.name : widget.pos.user.name"/> vous a servi<br /></div>
+                    <!-- Le nom du client -->
+                    <t t-if="order.get_client()">Client: <t t-esc="order.get_client().name"/><br /></t>
                     <!-- Le Numéro de table -->
                     <t t-if="widget.pos.table.name"><br/>Table: <t t-esc="widget.pos.table.name"/><br/></t>
                 </div>
@@ -83,7 +82,7 @@
                         <col width='40%' />
                         <col width='30%' />
                     </colgroup>
-                    <tr>
+                    <tr t-if="order.get_total_discount() > 0">
                         <td></td>
                         <td>Total Remise:</td>
                         <td style='text-align:right'>
