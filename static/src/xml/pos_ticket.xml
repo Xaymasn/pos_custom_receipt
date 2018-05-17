@@ -2,8 +2,10 @@
 <template xml:space="preserve">
     <t t-extend="Chrome">
         <t t-jquery='.pos-branding' t-operation='replace'>
-             <img src='/pos_ticket_personnalise/static/img/Logo_Texte.png' style="width: 3%;padding: 2px 8px 0px 13px;float: left;"/>
-             <span class="placeholder-UsernameWidget" style="float: left;padding-top: 19px;color: #fff;"></span>
+            <div class="pos-branding">
+                <img class="pos-logo" src='/pos_ticket_personnalise/static/img/Logo_Texte.png'/>
+                <span class="placeholder-UsernameWidget" style="color: #fff;"></span>
+            </div>
         </t>
     </t>
 
