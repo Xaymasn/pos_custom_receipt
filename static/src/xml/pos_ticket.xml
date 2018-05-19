@@ -3,7 +3,7 @@
     <t t-extend="Chrome">
         <t t-jquery='.pos-branding' t-operation='replace'>
             <div class="pos-branding">
-                <img class="pos-logo" src='/pos_ticket_personnalise/static/img/Logo_Texte.png'/>
+                <img class="pos-logo" src='/pos_ticket_personnalise/static/img/Logo_Texte.png' style="margin-top:10px;margin-left:20px;" />
                 <span class="placeholder-UsernameWidget" style="color: #fff;"></span>
             </div>
         </t>
