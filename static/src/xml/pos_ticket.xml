@@ -32,7 +32,7 @@
                     <!-- Le nom du client -->
                     <t t-if="order.get_client()">Client: <t t-esc="order.get_client().name"/><br /></t>
                     <!-- Le Numéro de table -->
-                    <t t-if="widget.pos.table.name"><br/>Table: <t t-esc="widget.pos.table.name"/><br/></t>
+                    <t t-if="widget.pos.table"><br/>Table: <t t-esc="widget.pos.table.name"/><br/></t>
                 </div>
                 <t t-if="receipt.header">
                     <div style='text-align:center'>
